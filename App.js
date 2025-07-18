@@ -2,7 +2,7 @@
 import React from "react";
 import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
-import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
+import { createBottomTabNavigator } from "react-navigation";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 // Screens
 import AccountScreen from "./src/screens/AccountScreen";
@@ -34,7 +34,7 @@ const switchNavigator = createSwitchNavigator({
     Signin: SigninScreen,
     Signup: SignupScreen,
   }),
-  mainFlow: createMaterialBottomTabNavigator({
+  mainFlow: createBottomTabNavigator({
     trackListFlow,
     TrackCreate: TrackCreateScreen,
     Account: AccountScreen,
